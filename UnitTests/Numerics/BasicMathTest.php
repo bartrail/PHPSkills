@@ -7,9 +7,9 @@ class BasicMathTest extends PHPUnit_Framework_TestCase
 {    
     public function testSquare()
     {    
-        $this->assertEquals( 1, Moserware\Numerics\square(1) );
-        $this->assertEquals( 1.44, Moserware\Numerics\square(1.2) );
-        $this->assertEquals( 4, Moserware\Numerics\square(2) );
+        $this->assertEquals( 1, \square(1) );
+        $this->assertEquals( 1.44, \square(1.2) );
+        $this->assertEquals( 4, \square(2) );
     }
 }
 ?>
