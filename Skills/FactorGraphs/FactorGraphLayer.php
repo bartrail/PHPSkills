@@ -19,7 +19,7 @@ abstract class FactorGraphLayer
 
     protected function &getInputVariablesGroups()
     {
-        $inputVariablesGroups = $this->_inputVariablesGroups;
+        $inputVariablesGroups = &$this->_inputVariablesGroups;
         return $inputVariablesGroups;
     }
 
