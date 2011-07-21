@@ -20,20 +20,20 @@ class HashMap
     public function setValue(&$key, &$value)
     {
         $hash = self::getHash($key);
-        $this->_hashToKey[$hash] = &$key;
-        $this->_hashToValue[$hash] = &$value;
+        $this->_hashToKey[$hash] = $key;
+        $this->_hashToValue[$hash] = $value;
         return $this;
     }
 
     public function &getAllKeys()
     {
-        $keys = &\array_values($this->_hashToKey);
+        $keys = \array_values($this->_hashToKey);
         return $keys;
     }
 
     public function getAllValues()
     {
-        $values = &\array_values($this->_hashToValue);
+        $values = \array_values($this->_hashToValue);
         return $values;
     }
 
