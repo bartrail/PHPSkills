@@ -97,10 +97,10 @@ abstract class Factor
     {
         $index = count($this->_messages);
         $localMessages = &$this->_messages;
-        $localMessages[] = &$message;
+        $localMessages[] = $message;
         $this->_messageToVariableBinding->setValue($message, $variable);
         $localVariables = &$this->_variables;
-        $localVariables[] = &$variable;
+        $localVariables[] = $variable;
         return $message;
     }
 

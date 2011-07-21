@@ -24,8 +24,8 @@ abstract class GaussianFactor extends Factor
      */
     protected function sendMessageVariable(Message &$message, Variable &$variable)
     {
-        $marginal = &$variable->getValue();
-        $messageValue = &$message->getValue();
+        $marginal = $variable->getValue();
+        $messageValue = $message->getValue();
         $logZ = GaussianDistribution::logProductNormalization($marginal, $messageValue);
         $variable->setValue(GaussianDistribution::multiply($marginal, $messageValue));
         return $logZ;

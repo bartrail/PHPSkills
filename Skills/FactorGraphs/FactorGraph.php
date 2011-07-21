@@ -15,7 +15,7 @@ class FactorGraph
 
     public function setVariableFactory(VariableFactory &$factory)
     {
-        $this->_variableFactory = &$factory;
+        $this->_variableFactory = $factory;
     }
 }
 ?>

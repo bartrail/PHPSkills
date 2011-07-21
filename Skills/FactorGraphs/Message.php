@@ -20,7 +20,7 @@ class Message
 
     public function setValue(&$value)
     {        
-        $this->_value = &$value;
+        $this->_value = $value;
     }
 
     public function __toString()

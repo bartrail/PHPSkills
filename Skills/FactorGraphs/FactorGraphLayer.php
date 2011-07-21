@@ -14,12 +14,12 @@ abstract class FactorGraphLayer
 
     protected function __construct(FactorGraph &$parentGraph)
     {
-        $this->_parentFactorGraph = &$parentGraph;
+        $this->_parentFactorGraph = $parentGraph;
     }
 
     protected function &getInputVariablesGroups()
     {
-        $inputVariablesGroups = &$this->_inputVariablesGroups;
+        $inputVariablesGroups = $this->_inputVariablesGroups;
         return $inputVariablesGroups;
     }
 

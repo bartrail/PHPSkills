@@ -40,7 +40,7 @@ class GaussianWeightedSumFactor extends GaussianFactor
         
         for($i = 0; $i < $variableWeightsLength; $i++)
         {
-            $weight = &$variableWeights[$i];
+            $weight = $variableWeights[$i];
             $this->_weights[0][$i] = $weight;
             $this->_weightsSquared[0][$i] = square($weight);
         }

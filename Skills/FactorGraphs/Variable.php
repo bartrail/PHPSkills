@@ -22,7 +22,7 @@ class Variable
 
     public function setValue(&$value)
     {        
-        $this->_value = &$value;
+        $this->_value = $value;
     }
 
     public function resetToPrior()
@@ -50,7 +50,7 @@ class DefaultVariable extends Variable
 
     public function setValue(&$value)
     {
-        throw new Exception();
+        throw new \Exception();
     }
 }
 
@@ -60,7 +60,7 @@ class KeyedVariable extends Variable
     public function __construct(&$key, $name, &$prior)
     {
         parent::__construct($name, $prior);
-        $this->_key = &$key;
+        $this->_key = $key;
     }
 
     public function &getKey()
