@@ -16,7 +16,7 @@ class RatingContainer
 
     public function &getRating(Player &$player)
     {
-        $rating = &$this->_playerToRating->getValue($player);
+        $rating = $this->_playerToRating->getValue($player);
         return $rating;
     }
 
@@ -27,13 +27,13 @@ class RatingContainer
     
     public function &getAllPlayers()
     {
-        $allPlayers = &$this->_playerToRating->getAllKeys();
+        $allPlayers = $this->_playerToRating->getAllKeys();
         return $allPlayers;
     }
     
     public function &getAllRatings()
     {
-        $allRatings = &$this->_playerToRating->getAllValues();
+        $allRatings = $this->_playerToRating->getAllValues();
         return $allRatings;
     }
 
